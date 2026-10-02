@@ -37,6 +37,11 @@ async function runTests() {
     const hasCanvas = canvas !== null;
     logStep("1b. 3D Background WebGL Canvas", hasCanvas, hasCanvas ? "Three.js 3D canvas active in background" : "Canvas not found");
 
+    // TEST 1c: Creator Attribution ("made by shAshAnk")
+    const creatorText = await page.$("text=made by shAshAnk");
+    const hasCreator = creatorText !== null;
+    logStep("1c. Creator Attribution ('made by shAshAnk')", hasCreator, hasCreator ? "Attribution rendered on login page" : "Attribution not found");
+
     // ------------------------------------------------------------------
     // TEST 2: Interactive Preview Card on Landing Page
     // ------------------------------------------------------------------

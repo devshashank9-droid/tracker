@@ -168,8 +168,14 @@ export default function LandingPage({ onOpenSetupModal }) {
           No credit card required • Instant access with Google or Guest Mode
         </p>
 
+        {/* Creator Attribution */}
+        <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50/90 dark:bg-violet-950/60 border border-violet-200/80 dark:border-violet-900/60 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-xs hover:scale-105 transition-transform">
+          <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
+          <span>made by shAshAnk</span>
+        </div>
+
         {/* Clean Interactive Preview Mockup Card */}
-        <div className="mt-12 w-full max-w-2xl card-clean p-6 text-left">
+        <div className="mt-10 w-full max-w-2xl card-clean p-6 text-left">
           <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3 mb-4">
             <div className="flex items-center space-x-2">
               <span className="w-3 h-3 rounded-full bg-red-400 inline-block" />
@@ -278,12 +284,16 @@ export default function LandingPage({ onOpenSetupModal }) {
       </main>
 
       {/* Footer */}
-      <footer className="w-full border-t border-slate-200 dark:border-slate-800 py-5 text-center text-xs text-slate-500 dark:text-slate-400">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>LifePulse — Built with Next.js, Tailwind CSS &amp; Firebase</span>
+      <footer className="w-full border-t border-slate-200/80 dark:border-slate-800/80 py-5 text-center text-xs text-slate-500 dark:text-slate-400">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+            <span>LifePulse — Built with Next.js, Tailwind CSS &amp; Firebase</span>
+            <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
+            <span className="font-semibold text-violet-600 dark:text-violet-400">made by shAshAnk</span>
+          </div>
           <button
             onClick={onOpenSetupModal}
-            className="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold cursor-pointer inline-flex items-center gap-1"
+            className="text-violet-600 dark:text-violet-400 hover:underline font-semibold cursor-pointer inline-flex items-center gap-1"
           >
             Firebase Console Configuration Guide
             <ExternalLink className="w-3 h-3" />
